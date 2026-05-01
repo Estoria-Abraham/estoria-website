@@ -58,10 +58,8 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   /* ----- Contact form (only on contact.html) ----- */
-  const form = document.getElementById('estimate-form');
+  const form = document.getElementById('contact-form');
   if (form) {
-    const successPanel = document.getElementById('form-success');
-
     const validators = {
       name: function (v) { return v.trim().length >= 2; },
       email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); },
@@ -103,15 +101,10 @@
       });
 
       if (!valid) {
+        e.stopImmediatePropagation();
         const firstInvalid = form.querySelector('.invalid');
         if (firstInvalid) firstInvalid.focus();
         return;
-      }
-
-      form.style.display = 'none';
-      if (successPanel) {
-        successPanel.classList.add('show');
-        successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     });
   }
