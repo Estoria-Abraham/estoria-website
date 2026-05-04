@@ -207,7 +207,7 @@ p { margin: 0 0 1.25rem; }
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: var(--cream);
+    background-color: #1a1a1a;
     padding: 20px 0;
     border-top: 1px solid var(--mist);
     z-index: 1000;
@@ -215,6 +215,22 @@ p { margin: 0 0 1.25rem; }
 
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-links a {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 24px 0;
+    letter-spacing: 0.2em;
+    opacity: 1;
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .nav-links a:hover {
+    color: var(--copper);
   }
 
   .nav-toggle {
