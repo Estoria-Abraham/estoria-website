@@ -207,8 +207,8 @@ p { margin: 0 0 1.25rem; }
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #1a1a1a;
-    padding: 20px 0;
+    background-color: var(--cream);
+    padding: 0;
     border-top: 1px solid var(--mist);
     z-index: 1000;
   }
@@ -218,19 +218,23 @@ p { margin: 0 0 1.25rem; }
   }
 
   .nav-links a {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 24px 0;
-    letter-spacing: 0.2em;
-    opacity: 1;
+    color: var(--charcoal);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 16px var(--gutter);
+    letter-spacing: 0.14em;
     display: block;
     text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   }
 
   .nav-links a:hover {
     color: var(--copper);
+  }
+
+  /* Override the over-hero white-text rule at mobile size so the dropdown stays charcoal-on-cream */
+  .site-nav:not(.scrolled):not(.solid) .nav-links a {
+    color: var(--charcoal);
   }
 
   .nav-toggle {
